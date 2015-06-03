@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @comment.daily_note_id = DailyNote.find(params[:daily_note_id])
   end
 
   def new
