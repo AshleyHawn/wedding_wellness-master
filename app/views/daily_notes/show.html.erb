@@ -6,6 +6,7 @@
       <div class="panel-heading">
         <h3 class="panel-title">Daily Note #<%= @daily_note.id %></h3>
       </div>
+
       <div class="panel-body">
         <div class="row">
           <div class="col-md-12">
@@ -38,15 +39,13 @@
               </a>
             </div>
 
-      <div class="row">
-          <div class="col-md-12">
-            <dl class="dl-horizontal">
-              <dt>Comments</dt>
-              <dd><%= @comment %></dd>
-            </dl>
-
-
-          </div>
+              <div class="row">
+                  <div class="col-md-12">
+                    <dl class="dl-horizontal">
+                      <dt>Comments</dt>
+                      <dd><%= @comment %></dd>
+                    </dl>
+           </div>
         </div>
       </div>
     </div>
