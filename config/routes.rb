@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # Routes for the Daily_note resource:
   # CREATE
   get "/daily_notes/new", :controller => "daily_notes", :action => "new"

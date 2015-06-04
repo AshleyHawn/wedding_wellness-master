@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'acts_as_commentable'
 
+gem 'activeadmin', '~> 1.0.0.pre1'
+
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git", :branch => "simple"
 
 # Use ActiveModel has_secure_password
