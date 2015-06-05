@@ -56,7 +56,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts_as_commentable (4.0.2)
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (6.0.0)
@@ -207,7 +206,6 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 1.0.0.pre1)
-  acts_as_commentable
   byebug
   coffee-rails (~> 4.1.0)
   devise

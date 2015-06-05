@@ -25,8 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
-gem 'acts_as_commentable'
-
 gem 'activeadmin', '~> 1.0.0.pre1'
 
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git", :branch => "simple"

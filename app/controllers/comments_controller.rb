@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
+    @comment = Comment.new(daily_note_id: params[:daily_note_id])
   end
 
   def create

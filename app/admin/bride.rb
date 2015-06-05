@@ -8,7 +8,7 @@ ActiveAdmin.register Bride do
   #
   # or
   #
-permit_params :wedding_date, :program_start_date
+permit_params :wedding_date, :program_start_date, :coach
   #   permitted = [:permitted, :attributes]
   #   permitted << :other if resource.something?
   #   permitted

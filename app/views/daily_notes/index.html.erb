@@ -34,7 +34,6 @@
               <th>Note</th>
               <th>Comment</th>
               <th>Full View</th>
-              <th>Delete</th>
             </tr>
           </thead>
         <% @daily_notes.each do |daily_note| %>
@@ -45,10 +44,7 @@
               <td><%= daily_note.day %></td>
               <td><%= daily_note.text %></td>
               <td><a href="/comments/new/" class="btn btn-info"><i class="fa fa-comment-o"></i></a></td>
-              <td><a href="/daily_notes/<%= daily_note.id %>" class="btn btn-success"><i class="fa fa-search-plus"></i></a>
-              <td><a href="/delete_daily_note/<%= daily_note.id %>" class="btn btn-danger" rel="nofollow">
-            <i class="fa fa-trash-o"></i></a></td>
-
+              <td><a href="/daily_notes/<%= daily_note.id %>" class="btn btn-success"><i class="fa fa-search-plus"></i></a></td>
             <% end %>
             </td>
           </tr>
