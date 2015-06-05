@@ -1,7 +1,6 @@
 <div class="page-header">
   <h1>
     Coaches
-    <a href="/coaches/new" class="btn btn-lg btn-success"><i class="fa fa-plus"></i></a>
   </h1>
 </div>
 
@@ -26,19 +25,12 @@
         <dl>
           <dt>Coach name</dt>
           <dd><%= coach.coach_name %></dd>
-
+          <br>
+          <dd>Send <%= coach.coach_name %> an Email</dd>
         </dl>
         <div class="btn-group btn-group-justified">
-          <a href="/coaches/<%= coach.id %>" class="btn btn-primary">
-            <i class="fa fa-search-plus"></i>
-          </a>
-
-          <a href="/coaches/<%= coach.id %>/edit" class="btn btn-warning">
-            <i class="fa fa-edit"></i>
-          </a>
-
-          <a href="/delete_coach/<%= coach.id %>" class="btn btn-danger" rel="nofollow">
-            <i class="fa fa-trash-o"></i>
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank" class="btn btn-primary">
+            <i class="fa fa-envelope"></i>
           </a>
         </div>
       </div>
