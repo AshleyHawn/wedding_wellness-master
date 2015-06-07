@@ -26,15 +26,15 @@
                 <i class="fa fa-chevron-left"></i>
               </a>
 
-              <a href="/comments/new?daily_note_id=<%= @comment.daily_note_id %>" class="btn btn-info">
+              <a href="/comments/new?daily_note_id=<%= @comment %>" class="btn btn-info">
                 <i class="fa fa-comment-o"></i>
               </a>
 
-              <a href="/daily_notes/<%= @comment.daily_note_id %>/edit" class="btn btn-warning">
+             <a href="/daily_notes/<%= @daily_note.id %>/edit" class="btn btn-warning">
                 <i class="fa fa-edit"></i>
               </a>
 
-              <a href="/delete_daily_note/<%= @comment.daily_note_id %>" class="btn btn-danger" rel="nofollow">
+              <a href="/delete_daily_note/<%= @daily_note.id %>" class="btn btn-danger" rel="nofollow">
                 <i class="fa fa-trash-o"></i>
               </a>
             </div>
@@ -43,7 +43,7 @@
                   <div class="col-md-12">
                     <dl class="dl-horizontal">
                       <dt>Comments</dt>
-                      <dd><%= @comments %></dd>
+                      <dd><%= @comment %></dd>
                     </dl>
            </div>
         </div>
