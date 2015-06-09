@@ -6,7 +6,6 @@ class DailyNotesController < ApplicationController
 
   def show
     @daily_note = DailyNote.find(params[:id])
-    @comment = @daily_note.comments
   end
 
   def new

@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Daily Note #<%= @daily_note.id %></h3>
+        <h3 class="panel-title">Daily Note #<%= @daily_note.day %></h3>
       </div>
 
       <div class="panel-body">
@@ -37,15 +37,7 @@
               <a href="/delete_daily_note/<%= @daily_note.id %>" class="btn btn-danger" rel="nofollow">
                 <i class="fa fa-trash-o"></i>
               </a>
-            </div>
-
-              <div class="row">
-                  <div class="col-md-12">
-                    <dl class="dl-horizontal">
-                      <dt>Comments</dt>
-                      <dd><%= @comment %></dd>
-                    </dl>
-           </div>
+          </div>
         </div>
       </div>
     </div>

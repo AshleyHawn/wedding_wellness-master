@@ -6,6 +6,7 @@
 
 <!-- Responsive, Isotope-based layout example -->
 
+
 <hr>
 
 <div class="row isotope-container">
@@ -13,7 +14,7 @@
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Comment</h3>
+        <h3 class="panel-title">Comment #<%= comment.id %></h3>
       </div>
       <div class="panel-body">
         <dl>
@@ -26,13 +27,13 @@
         </dl>
         <div class="btn-group btn-group-justified">
 
-           <a href="/comments/<%= comment.daily_note_id %>/edit" class="btn btn-warning">
-
+          <a href="/comments/<%= comment.id %>/edit" class="btn btn-warning">
             <i class="fa fa-edit"></i>
           </a>
-           <a href="/delete_comment/<%= comment.daily_note_id %>" class="btn btn-danger" rel="nofollow">
+
+          <a href="/delete_comment/<%= comment.id %>" class="btn btn-danger" rel="nofollow">
             <i class="fa fa-trash-o"></i>
-            </a>
+          </a>
         </div>
       </div>
     </div>
@@ -51,39 +52,3 @@
 
     // init Isotope
     var $container = $('.isotope-container');
-
-    $container.imagesLoaded(function() {
-      $container.isotope({
-        itemSelector: '.isotope-item',
-        layoutMode: 'masonry',
-        filter: function() {
-          return qsRegex ? $(this).text().match( qsRegex ) : true;
-        }
-      })
-    });
-
-    // use value of search field to filter
-    var $quicksearch = $('#quicksearch').keyup( debounce( function() {
-      qsRegex = new RegExp( $quicksearch.val(), 'gi' );
-      $container.isotope();
-    }, 200 ) );
-
-  });
-
-  // debounce so filtering doesn't happen every millisecond
-  function debounce( fn, threshold ) {
-    var timeout;
-    return function debounced() {
-      if ( timeout ) {
-        clearTimeout( timeout );
-      }
-      function delayed() {
-        fn();
-        timeout = null;
-      }
-      timeout = setTimeout( delayed, threshold || 100 );
-    }
-  }
-</script>
-
-<!-- End responsive, Isotope-based layout example -->
